@@ -81,3 +81,69 @@ public class StackDS {
 
     // if top initially is -1, if top == -1 then stack is empty
 }
+
+/*
+class Node {
+    Node next;
+    int val;
+
+    Node(int val) {
+        this.val = val;
+        next = null;
+    }
+}
+*/
+public static int sizeOfList(Node node) {
+    int count = 0;
+    Node temp = node; 
+    while(temp != null) {
+        count++;
+        temp = temp.next;
+    }
+    return count;
+}
+
+public static Node findNode(int i, Node node) {
+    int count = 0;
+    Node temp = node;
+    while(count < i) {
+        count++;
+        temp = temp.next;
+    }
+    return temp;
+}
+
+static class Answer {
+    public int answer;
+    public void Answer() {
+        answer = 0;
+    }
+}
+
+static Node first;
+
+public static int maxChocolates(Node head) {
+//Enter your code here
+        // 5000 = 5 * 10^3
+        // n^2 = 25 * 10^6
+        // 10^7
+        // N^2 solution will work
+
+        // 1. Normal O(n^2) solution
+        // int n = sizeOfList(head);
+        // int students = n/2;
+        // Node temp = head;
+        // int max = 0;
+        // for(int i = 0; i < students; i++) {
+        //     int firstBox = temp.val;
+        //     // find value of second box
+        //     // index of second box = n - i - 1 for zero based indexing
+        //     int secondBox = findNode(n-i-1, head).val;
+        //     int result = firstBox + secondBox;
+        //     if (result > max) {
+        //         max = result;
+        //     }
+        //     temp = temp.next;
+        // }
+        // return max;
+
